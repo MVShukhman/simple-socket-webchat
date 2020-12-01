@@ -14,7 +14,7 @@ def login_exists(value):
     ans = len(cursor.fetchall())
     cursor.close()
     conn.close()
-    return ans > 0
+    return ans
 
 
 def user_check(user_login, user_password):
@@ -25,6 +25,7 @@ def user_check(user_login, user_password):
     ans = len(cursor.fetchall())
     cursor.close()
     conn.close()
+    return ans
 
 
 def create_user(login, password):
